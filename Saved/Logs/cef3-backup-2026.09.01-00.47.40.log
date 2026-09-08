@@ -1,0 +1,6 @@
+[3540:19496:0901/092629.501:WARNING:chrome_main_delegate.cc(745)] This is Chrome version 128.0.6613.138 (not a warning)
+[3540:19496:0901/092629.526:ERROR:os_crypt_win.cc(100)] Failed to decrypt: 指定された状態で使用するには無効なキーです。 (0x8009000B)
+[3540:19236:0901/092629.562:ERROR:google_update_settings.cc(265)] Failed opening key Software\Chromium to set usagestats; result: 5
+[3540:19496:0901/092629.582:WARNING:account_consistency_mode_manager.cc(77)] Desktop Identity Consistency cannot be enabled as no OAuth client ID and client secret have been configured.
+[23608:25888:0901/092632.590:WARNING:frame_impl.cc(430)] virtual CefFrameImpl::SendProcessMessage sent to detached frame 5-442002365F94ABA8CE63F9F600ADA904 will be ignored
+[3540:19496:0901/094740.828:WARNING:pref_notifier_impl.cc(41)] Pref observer for media_router.cast_allow_all_ips found at shutdown.
