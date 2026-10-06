@@ -1,22 +1,23 @@
-# 引き継ぎ (2026-10-06 09:55 / feature/lecture-011)
+# 引き継ぎ (2026-10-06 10:10 / feature/lecture-011)
 
-次の一手: `uecli setup --project <ProjectStudy.uproject のパス>` を実行し、エディタを開いて `uecli ping` で接続を確認する。
+次の一手: スライド25・26・27・29・36・37・38 のスクショをチャットに直接貼る(画像が読めれば後半の実装に進める)。貼れない場合は「私の設計で進める」と指示する。
 
 ## 完了
-- 講義011の前半を実装(コンパイル成功・保存済み)
-  - `BP_Key`: `RotatingMovement`(Yaw 90)を追加し、タイムライン回転ノードを削除
-  - `BP_MovingBox`(新規): `Cube` + `InterpToMovement`、PingPong、Z+400 を 3秒、自動起動オフ
-  - `BP_SwitchButton`: `TargetBox`(インスタンス編集可)を追加。Sequence で `OpenDoor` と `SetActive(true)` を実行
-- `Intermediate/` `Saved/` `DerivedDataCache/` を git 追跡から外した(ファイルは残してある)
+- 講義011の前半を実装(前回コミット 96ed801)
+  - `BP_Key`: `RotatingMovement`(Yaw 90)、`BP_MovingBox`(新規)、`BP_SwitchButton` の `TargetBox`
+- レベル `TestLevel` に `BP_MovingBox` を配置(210,-600,0)し、`BP_SwitchButton.TargetBox` に設定。保存済み
+- スライド画像を `doc/011_講義資料（コンポーネントの活用）.pptx` から抽出して対応を確認
+  - スライド25→image21、26→image24、27→image26・45、29→image35、36→image44、37→image43、38→image32
 
 ## 残り（優先順・最大5件）
 - 講義011の後半: `AC_OverlapPlayer`、`BP_Key` と `BP_Player` の修正、`UW_ItemName`、`UW_GameUI` の `ItemList`
-- レベルへ `BP_MovingBox` を置き、`BP_SwitchButton` の `TargetBox` を設定して動作確認
+- 動作確認(PIE で スイッチ → `BP_MovingBox` が上下に動くか)
 
 ## 保留
-- 後半の実装 — スライド25〜27・29・36〜38 のノード構成が画像のみ。スクショをもらうか、私の設計で進めるかの判断待ち
+- 後半の実装 — ノード構成が画像のみ。この環境(`read` と worker)では画像を読めなかった(`CANNOT_SEE_IMAGE`)。スクショの提供か設計一任の判断待ち
 - `STM_MovingBox` 未作成 — 現状は標準 `Cube` で代用
 
 ## 再開に必要なもの
 - Unreal Engine 5.7 と `uecli`(`ProjectStudy.uproject` を開く)
-- `Plugins/UECli/` `.mcp.json` `.claude/` `claude-1-ultra-sonnet-adhd.cmd` は git 管理外。`uecli setup` で再生成する(`.uproject` はプラグインを参照済み)
+- `Plugins/UECli/` `.mcp.json` `.claude/` `claude-1-ultra-sonnet-adhd.cmd` は git 管理外。`uecli setup` で再生成する
+- スライド画像は pptx を展開して取り出す(`ppt/media/imageN.png`)
