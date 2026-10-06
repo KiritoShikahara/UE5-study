@@ -1,23 +1,27 @@
-# 引き継ぎ (2026-10-06 10:10 / feature/lecture-011)
+# 引き継ぎ (2026-10-06 10:40 / feature/lecture-011)
 
-次の一手: スライド25・26・27・29・36・37・38 のスクショをチャットに直接貼る(画像が読めれば後半の実装に進める)。貼れない場合は「私の設計で進める」と指示する。
+次の一手: UE エディタで `UW_GameUI` のデザイナーを開き、`ItemList` の「変数か」にチェックを入れて保存する(1分)。その後 `/pickup` で再開する。
 
 ## 完了
-- 講義011の前半を実装(前回コミット 96ed801)
-  - `BP_Key`: `RotatingMovement`(Yaw 90)、`BP_MovingBox`(新規)、`BP_SwitchButton` の `TargetBox`
-- レベル `TestLevel` に `BP_MovingBox` を配置(210,-600,0)し、`BP_SwitchButton.TargetBox` に設定。保存済み
-- スライド画像を `doc/011_講義資料（コンポーネントの活用）.pptx` から抽出して対応を確認
-  - スライド25→image21、26→image24、27→image26・45、29→image35、36→image44、37→image43、38→image32
+- `AC_OverlapPlayer` を新規作成。`NotifyToPlayer(OverlapActor, OwnerName)` が `BP_Player` にキャストし、`ReceivedNotifyFromEvent` を呼ぶ
+- `BP_Key` に `AC_OverlapPlayer` を追加。Overlap から `NotifyToPlayer(OtherActor, KeyName)` を呼ぶ
+- `BP_Player.ReceivedNotifyFromEvent`: 暫定で `OwnerName` を PrintString に出力(コンパイル成功)。変数 `ItemNames`(name[])と `ItemCounts`(int[])を追加済み(未使用)
+- `UW_ItemName` を作成。`TextBlock`(`ItemName`)と変数 `DisplayName`、`GetItemNameText` でバインド
+- `UW_GameUI` に `VerticalBox`(`ItemList`)と関数 `UpdateItemList(Names, Counts)` の枠を追加(中身は空)
+- ue-cli の制限をまとめた: `ue-cli-report/ue-cli-bugs.md` / `ue-cli-limitations.md`
 
 ## 残り（優先順・最大5件）
-- 講義011の後半: `AC_OverlapPlayer`、`BP_Key` と `BP_Player` の修正、`UW_ItemName`、`UW_GameUI` の `ItemList`
-- 動作確認(PIE で スイッチ → `BP_MovingBox` が上下に動くか)
+1. `UW_GameUI.UpdateItemList` の実装(`ItemList` クリア → 名前ごとに `UW_ItemName` を作成、`DisplayName` を設定、`AddChild`)
+2. `BP_Player.ReceivedNotifyFromEvent` の実装(`ItemNames` を `Find` → なければ `Add` と個数1、あれば個数+1 を `Set Array Elem`、最後に `GameUI.UpdateItemList(ItemNames, ItemCounts)`)
+3. PIE で動作確認(鍵を取ると右上のリストに名前と個数が出るか、スイッチで `BP_MovingBox` が動くか)
+4. `STM_MovingBox` の作成(現状は標準 `Cube` で代用)
 
 ## 保留
-- 後半の実装 — ノード構成が画像のみ。この環境(`read` と worker)では画像を読めなかった(`CANNOT_SEE_IMAGE`)。スクショの提供か設計一任の判断待ち
-- `STM_MovingBox` 未作成 — 現状は標準 `Cube` で代用
+- 残り1・2 — ue-cli の制限(配列ノードの型が確定しない、ウィジェットを変数にできない)。更新後・エディタ再起動後も再現。GUI での操作か、ue-cli のプラグイン手動ビルド後の再検証が必要
+- スライドの画像 — この環境では読めない(OCR で断片のみ)。ノード構成は私の推定
 
 ## 再開に必要なもの
 - Unreal Engine 5.7 と `uecli`(`ProjectStudy.uproject` を開く)
 - `Plugins/UECli/` `.mcp.json` `.claude/` `claude-1-ultra-sonnet-adhd.cmd` は git 管理外。`uecli setup` で再生成する
+- ノード ID(`N<k>`)は変更のたびに変わる。ue-cli では guid を使う
 - スライド画像は pptx を展開して取り出す(`ppt/media/imageN.png`)
