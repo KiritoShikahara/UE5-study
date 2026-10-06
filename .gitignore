@@ -10,3 +10,8 @@ Saved/
 *.VC.db
 *.VC.opendb
 *.sln
+# uecli (reinstall with `uecli setup`)
+Plugins/UECli/
+.mcp.json
+.claude/
+claude-1-ultra-sonnet-adhd.cmd

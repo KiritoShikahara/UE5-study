@@ -1,16 +1,22 @@
-# 引き継ぎ (2026-10-06 09:30 / main)
+# 引き継ぎ (2026-10-06 09:55 / feature/lecture-011)
 
-次の一手: `doc/011_講義資料（コンポーネントの活用）.pptx` のスライド36〜38(画像のみ)を開いて内容を確認する。
+次の一手: `uecli setup --project <ProjectStudy.uproject のパス>` を実行し、エディタを開いて `uecli ping` で接続を確認する。
 
 ## 完了
-- リポジトリをクローン (`UE5-study`)
-- 講義資料011を読了。内容: 標準コンポーネント(RotatingMovement / 移動補間でBP_MovingBox / BP_SwitchButtonのTargetBox)と、ActorComponent自作(`AC_OverlapPlayer`、獲得アイテムリストを`UW_GameUI`の`ItemList`に表示)
+- 講義011の前半を実装(コンパイル成功・保存済み)
+  - `BP_Key`: `RotatingMovement`(Yaw 90)を追加し、タイムライン回転ノードを削除
+  - `BP_MovingBox`(新規): `Cube` + `InterpToMovement`、PingPong、Z+400 を 3秒、自動起動オフ
+  - `BP_SwitchButton`: `TargetBox`(インスタンス編集可)を追加。Sequence で `OpenDoor` と `SetActive(true)` を実行
+- `Intermediate/` `Saved/` `DerivedDataCache/` を git 追跡から外した(ファイルは残してある)
 
 ## 残り（優先順・最大5件）
-- プロジェクト現状確認(`BP_Key`等が講義のどの段階か)
-- 講義011の前半を実装(RotatingMovement、BP_MovingBox、スイッチ連動)
-- 講義011の後半を実装(AC_OverlapPlayer、UW_ItemName、UW_GameUI、BP_Player)
+- 講義011の後半: `AC_OverlapPlayer`、`BP_Key` と `BP_Player` の修正、`UW_ItemName`、`UW_GameUI` の `ItemList`
+- レベルへ `BP_MovingBox` を置き、`BP_SwitchButton` の `TargetBox` を設定して動作確認
+
+## 保留
+- 後半の実装 — スライド25〜27・29・36〜38 のノード構成が画像のみ。スクショをもらうか、私の設計で進めるかの判断待ち
+- `STM_MovingBox` 未作成 — 現状は標準 `Cube` で代用
 
 ## 再開に必要なもの
-- Unreal Engine 5(`ProjectStudy.uproject` を開く)
-- `Intermediate/` `Saved/` `DerivedDataCache/` はgit追跡済みのキャッシュ。コミットせず除外(`.gitignore`に追加。追跡解除は未実施)
+- Unreal Engine 5.7 と `uecli`(`ProjectStudy.uproject` を開く)
+- `Plugins/UECli/` `.mcp.json` `.claude/` `claude-1-ultra-sonnet-adhd.cmd` は git 管理外。`uecli setup` で再生成する(`.uproject` はプラグインを参照済み)

@@ -1,13 +1,0 @@
-[22832:7396:0707/091151.201:WARNING:chrome_main_delegate.cc(745)] This is Chrome version 128.0.6613.138 (not a warning)
-[22832:19500:0707/091151.467:ERROR:google_update_settings.cc(265)] Failed opening key Software\Chromium to set usagestats; result: 5
-[22832:7396:0707/091151.581:WARNING:account_consistency_mode_manager.cc(77)] Desktop Identity Consistency cannot be enabled as no OAuth client ID and client secret have been configured.
-[22832:21252:0707/091154.674:WARNING:leveldb_database.cc(141)] Unable to open C:\Users\com\Desktop\b\Saved\webcache_6613\Default\shared_proto_db\metadata: IO error: C:\Users\com\Desktop\b\Saved\webcache_6613\Default\shared_proto_db\metadata/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
-[22832:21252:0707/091154.676:WARNING:leveldb_database.cc(141)] Unable to open C:\Users\com\Desktop\b\Saved\webcache_6613\Default\shared_proto_db\metadata: IO error: C:\Users\com\Desktop\b\Saved\webcache_6613\Default\shared_proto_db\metadata/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
-[22832:21252:0707/091154.678:WARNING:leveldb_database.cc(141)] Unable to open C:\Users\com\Desktop\b\Saved\webcache_6613\Default\shared_proto_db\metadata: IO error: C:\Users\com\Desktop\b\Saved\webcache_6613\Default\shared_proto_db\metadata/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
-[22832:21252:0707/091154.678:WARNING:leveldb_database.cc(141)] Unable to open C:\Users\com\Desktop\b\Saved\webcache_6613\Default\shared_proto_db\metadata: IO error: C:\Users\com\Desktop\b\Saved\webcache_6613\Default\shared_proto_db\metadata/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
-[22832:21252:0707/091155.130:WARNING:value_store_frontend.cc(47)] Reading ahfgeienlihckogmohjhadlkjgocpleb.alarms from  failed: IO error: .../MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
-[22832:21252:0707/091155.131:WARNING:value_store_frontend.cc(47)] Reading mhjfbmdgcfjbbpaeojofohoefgiehjai.alarms from  failed: IO error: .../MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
-[17208:21744:0707/091155.138:ERROR:backend_impl.cc(989)] Critical error found -8
-[17208:21744:0707/091155.732:WARNING:storage_block-inl.h(138)] Failed data load.
-[23932:1860:0707/091156.165:WARNING:frame_impl.cc(430)] virtual CefFrameImpl::SendProcessMessage sent to detached frame 5-EBC685286A5859719F10CFD1BFBFBE99 will be ignored
-[22832:7396:0707/091452.619:WARNING:pref_notifier_impl.cc(41)] Pref observer for media_router.cast_allow_all_ips found at shutdown.
