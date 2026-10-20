@@ -3,11 +3,11 @@
 各タスク = エディタ作業1つ＋PIE確認。目安時間付き。
 
 ## Phase 1: コンポーネント（011） 約2時間
-- [ ] T01 BP_Key に RotatingMovement 追加、旧回転処理を削除（10分）
-- [ ] T02 STM_MovingBox 作成（マテリアル・コリジョン）（15分）
-- [ ] T03 BP_MovingBox 作成、InterpToMovement で2点→複数点移動（20分）
-- [ ] T04 BP_MovingBox の自動起動 OFF、BP_SwitchButton に TargetBox＋Sequence＋SetActive（15分）
-- [ ] T05 BP_Player のコリジョンにタグ `Player`（5分）
+- [x] T01 BP_Key に RotatingMovement 追加、旧回転処理を削除（10分）
+- [x] T02 STM_MovingBox 作成（マテリアル・コリジョン）（15分）
+- [x] T03 BP_MovingBox 作成、InterpToMovement で2点→複数点移動（20分）
+- [x] T04 BP_MovingBox の自動起動 OFF、BP_SwitchButton に TargetBox＋Sequence＋SetActive（15分）
+- [x] T05 BP_Player のコリジョンにタグ `Player`（5分）
 - [ ] T06 AC_OverlapPlayer 作成、BP_Key に付与して名前をプレイヤーへ送る（20分）
 - [ ] T07 BP_Player に取得アイテムリスト（名前・個数）（15分）
 - [ ] T08 UW_ItemName 作成、UW_GameUI に ItemList＋更新イベント、BP_Player から呼ぶ（25分）

@@ -10,3 +10,5 @@ Saved/
 *.VC.db
 *.VC.opendb
 *.sln
+__pycache__/
+*.pyc
