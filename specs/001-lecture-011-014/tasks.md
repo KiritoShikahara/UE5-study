@@ -13,18 +13,18 @@
 - [x] T08 UW_ItemName 作成、UW_GameUI に ItemList＋更新イベント、BP_Player から呼ぶ（25分）
 
 ## Phase 2: インターフェース（012） 約1.5時間
-- [ ] T09 BPI_Player 作成、PlayerRecievedNotifyFromEvent を BP_Player の InterfaceGraph に実装（15分）
-- [ ] T10 AC_OverlapPlayer のキャストをインターフェース呼び出しへ（10分）
-- [ ] T11 BP_Door / BP_SwitchButton をタグ判定へ（15分）
-- [ ] T12 回復薬メッシュ作成（ピボット中央）（15分）
-- [ ] T13 BP_HealItem＋PlayerReceivedNotifyFromHealItem＋`Heal` 分岐＋HP全回復（25分）
+- [x] T09 BPI_Player 作成、PlayerRecievedNotifyFromEvent を BP_Player の InterfaceGraph に実装（15分）
+- [x] T10 AC_OverlapPlayer のキャストをインターフェース呼び出しへ（10分）
+- [x] T11 BP_Door / BP_SwitchButton をタグ判定へ（15分）
+- [x] T12 回復薬メッシュ作成（ピボット中央）（15分）
+- [x] T13 BP_HealItem＋PlayerReceivedNotifyFromHealItem＋`Heal` 分岐＋HP全回復（25分）
 
 ## Phase 3: セーブ（013） 約3.5時間
 - [ ] T14 M_SaveLight / N_SaveLight 作成（30分）
-- [ ] T15 UW_ScreenEffect（Flash アニメ）、BP_Player BeginPlay で生成（25分）
-- [ ] T16 BP_SavePoint（N_SaveLight・Arrow）、触れると Flash（インターフェース経由）（25分）
-- [ ] T17 BPI_Player にセーブ用2関数、GameInstance に位置/向き保存、死亡時に Arrow 方向で復活（DelayUntilNextTick）（35分）
-- [ ] T18 GameInstance にアイテムリスト保存/取得、BP_Player 初期化時にロード＋UI更新（25分）
+- [x] T15 UW_ScreenEffect（Flash アニメ）、BP_Player BeginPlay で生成（25分）
+- [x] T16 BP_SavePoint（N_SaveLight・Arrow）、触れると Flash（インターフェース経由）（25分）
+- [x] T17 BPI_Player にセーブ用2関数、GameInstance に位置/向き保存、死亡時に Arrow 方向で復活（DelayUntilNextTick）（35分）
+- [x] T18 GameInstance にアイテムリスト保存/取得、BP_Player 初期化時にロード＋UI更新（25分）
 - [ ] T19 BP_MovingBox 終了処理・BP_SwitchButton 押下処理の修正（20分）
 - [ ] T20 BP_MySaveGame 作成、Export（スロット出力）/ ImportSaveData＋Init オーバーライド（35分）
 - [ ] T21 R キーでセーブ削除（15分）
