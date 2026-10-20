@@ -12,3 +12,5 @@ Saved/
 *.sln
 __pycache__/
 *.pyc
+
+~$*

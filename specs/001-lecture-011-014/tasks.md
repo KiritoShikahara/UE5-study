@@ -8,9 +8,9 @@
 - [x] T03 BP_MovingBox 作成、InterpToMovement で2点→複数点移動（20分）
 - [x] T04 BP_MovingBox の自動起動 OFF、BP_SwitchButton に TargetBox＋Sequence＋SetActive（15分）
 - [x] T05 BP_Player のコリジョンにタグ `Player`（5分）
-- [ ] T06 AC_OverlapPlayer 作成、BP_Key に付与して名前をプレイヤーへ送る（20分）
-- [ ] T07 BP_Player に取得アイテムリスト（名前・個数）（15分）
-- [ ] T08 UW_ItemName 作成、UW_GameUI に ItemList＋更新イベント、BP_Player から呼ぶ（25分）
+- [x] T06 AC_OverlapPlayer 作成、BP_Key に付与して名前をプレイヤーへ送る（20分）
+- [x] T07 BP_Player に取得アイテムリスト（名前・個数）（15分）
+- [x] T08 UW_ItemName 作成、UW_GameUI に ItemList＋更新イベント、BP_Player から呼ぶ（25分）
 
 ## Phase 2: インターフェース（012） 約1.5時間
 - [ ] T09 BPI_Player 作成、PlayerRecievedNotifyFromEvent を BP_Player の InterfaceGraph に実装（15分）
